@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Обо мне{% endblock title %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="{% static 'image/image.png' %}" class="rounded-circle" alt="Profile" width="150">
+        </div>
+        <div class="col-md-8">
+            <h1>Портфолио</h1>
+            <p class="lead">Я работал над различными проектами, используя аналитические инструменты, программирование и визуализацию данных. Вот некоторые из моих лучших работ:</p>
+            
+            <div class="row">
+              <!-- Проект 1 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Проект по анализу данных</h5>
+                    <p class="card-text">Разработка аналитической модели для прогнозирования продаж на основе исторических данных.</p>
+                    <a href="project1.html" class="btn btn-primary">Посмотреть проект</a>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Проект 2 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Анализ данных о клиентских предпочтениях</h5>
+                    <p class="card-text">Использование машинного обучения для кластеризации клиентов по предпочтениям и выявления трендов.</p>
+                    <a href="project2.html" class="btn btn-primary">Посмотреть проект</a>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Проект 3 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Визуализация данных с помощью Tableau</h5>
+                    <p class="card-text">Создание интерактивных дашбордов для отслеживания ключевых показателей бизнеса.</p>
+                    <a href="project3.html" class="btn btn-primary">Посмотреть проект</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <!-- Проект 4 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Прогнозирование с использованием Python</h5>
+                    <p class="card-text">Моделирование временных рядов для прогнозирования спроса на продукцию.</p>
+                    <a href="project4.html" class="btn btn-primary">Посмотреть проект</a>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Проект 5 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Интерактивный отчет в Power BI</h5>
+                    <p class="card-text">Разработка отчета для анализа производительности сотрудников в компании.</p>
+                    <a href="project5.html" class="btn btn-primary">Посмотреть проект</a>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Проект 6 -->
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Анализ данных с Hadoop</h5>
+                    <p class="card-text">Оптимизация процессов обработки и анализа больших объемов данных </p>
+                    <a href="project6.html" class="btn btn-primary">Посмотреть проект</a>
+                  </div>
+                </div>
+              </div>
+            </div>            
+        </div>
+    </div>
+{% endblock content %}
