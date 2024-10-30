@@ -1,21 +1,41 @@
-{% for book in books %}
+<h1>Все книги (Book.objects.all())</h1>
+{% for book in books_all %}
 
 Название книги: {{ book.title }} </br>
 Дата публикации: {{ book.published_date }} </br>
 Количество страниц: {{ book.pages }} </br>
-Описание: {{ book.description }} 
+Описание: {{ book.description }}  </br>
+Рейтинг: {{ book.rating }}  </br>
+Издание: {{ book.publisher }}
 </br>
 --------------------------
 </br>
 {% endfor %}
 
+<h1>Первая книга (Book.objects.first())</h1>
+{{ books_first }}
+<h1>Последняя книга (Book.objects.last())</h1>
+{{ books_last }}
+<h1>Конкретная книга  (Book.objects.get(id = 2))</h1>
+{{ books_get }}
+<h1>Отфильтрованные данные </h1>
+{% for book in books_filter_publisher %}
+    {{ book }} </br>
+{% endfor %}
 
+<h1> Агрегированные данные </h1>
 
+{% for book in book_max_pages %}
+    Книга с наибольшим количеством страниц: {{ book }} </br>
+{% endfor %} </br>
 
-Сделайте страницу блога где будут посты с полями
-- Заголовок 
-- Подзаголовок
-- Автор
-- Текст 
-- И дата публикации (Оно должно заполнятся автоматом. Изучите как это делать)
+{% for book in book_oldest_name %}
+    Самая старая книга: {{ book }} </br>
+{% endfor %} </br>
+
+ Средний рейтинг всех книг: {{ books_agreg.rating__avg }} </br>
+
+Количество страниц всех книг: {{ pages_quantity.pages__sum }} </br>
+
+Количество книг: {{ books_quantity.title__count }} </br>
 
